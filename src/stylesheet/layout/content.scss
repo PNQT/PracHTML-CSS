@@ -9,3 +9,12 @@
           width: 100%;
      }
 }
+
+@media screen and (max-width: 1200px) {
+     .ellipse23,
+     .ellipse24,
+     .frame50,
+     .objects1 {
+         display: none;
+     }
+ }
