@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+@font-face {
+  font-family:"Circular Std";
+  src: url("../assets/fonts/circular-std-medium-500.ttf");
+}
+ 
+:root {
+  --width-value: 74rem;
+  --width-lage-value: 82rem;
+  --witdh-big-value: 96rem;
+}
+ 
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: pxToRem(24);
+  color: $text-color;
+  background-color: $background-color;
+
+  @include tablet {
+    font-size: pxToRem(11);
+    line-height: pxToRem(16);
+  }
+}
+
+

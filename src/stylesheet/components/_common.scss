@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+@forward "button";
+
+.container {
+
+  @include tablet {
+    max-width: 720px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+    max-width: inherit;
+  }
+}

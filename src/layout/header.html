@@ -1,0 +1,22 @@
+<header class="header" >      
+        <div class="logo">
+          <a class="logo_image" href="#">
+            <img src="./assets/icons/logo.svg" />
+            <h1 class="logo_name">Travlog</h1>
+          </a>
+        </div>
+        <img src="assets/icons/menu.111.svg" class="toggle" />
+
+        <ul class="navbar"> 
+          <include src="components/nav_list.html"  locals='{"name":"Home", "className":"active"}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Discover", "className":""}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Special Deals", "className":""}'></include>
+          <include src="components/nav_list.html"  locals='{"name":"Contact", "className":""}'></include>
+        </ul>
+    
+        <div class="button_group">        
+            <button class=" btn_login">Log In</button>     
+            <button class=" btn_signup">Sign Up</button>         
+        </div>
+  </header>
+  

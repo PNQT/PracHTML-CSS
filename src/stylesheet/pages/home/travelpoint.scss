@@ -1,0 +1,225 @@
+@use "../../abstracts/" as *;
+
+.travelpoint {
+  display: flex;
+  margin: 0rem 8rem 0rem 0rem;
+  padding: 4rem 0rem;
+  margin-left: -8rem;
+  align-items: flex-end;
+  width: 82rem;
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+    flex: 1 0 0;
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      align-self: stretch;
+
+      &_text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        align-self: stretch;
+
+        h5 {
+          color: var(--Secondary, #f85e9f);
+          font-family: "Circular Std";
+          font-size: 1.4375rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 1.725rem */
+          letter-spacing: 0.2875rem;
+          text-transform: uppercase;
+          align-self: stretch;
+        }
+        h3 {
+          color: var(--Grey-Scale-Black, #191825);
+          /* H3 */
+          font-family: "Circular Std";
+          font-size: 2.75rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+        }
+      }
+
+      &_decr {
+        color: var(--Grey-Scale-Black-50, rgba(25, 24, 37, 0.5));
+        /* Body */
+        font-family: Inter;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+      }
+    }
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+
+    &_element {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      align-self: stretch;
+
+      
+
+      .travelpoint_element {
+        //layout
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        flex: 1 0 0;
+        //style
+        border-radius: 2rem;
+        border: 1px solid var(--Grey-Scale-Black-10, rgba(25, 24, 37, 0.1));
+        background: var(--white, #fff);
+
+        h4 {
+          color: var(--Orange, #ff5722);
+          /* H4 */
+          font-family: "Circular Std";
+          font-size: 2.1875rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+
+          h6 {
+            color: var(--Grey-Scale-Black, #191825);
+            /* Body */
+            font-family: Inter;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+          }
+        }
+        &:hover{
+          transform: scale(1.02);
+          transition: transform 0.2s ease-in-out;
+          cursor: pointer;
+        } 
+      }
+    }
+  }
+  &_image{
+    width: 54.4375rem;
+    height: 43.5625rem;
+    flex-shrink: 0;
+  }
+}
+.frame50 {
+  width: 17.3125rem;
+  height: 22.0625rem;
+  flex-shrink: 0;
+
+  position: absolute;
+  right: 0;
+  top: 178rem;
+}
+
+@include tablet {
+  .frame50{
+    display: none;
+  }
+  .travelpoint {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 0 4rem;
+
+    &_image {
+      order: -1;
+      margin: auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    &_content {
+      width: 100%;
+      height: 100%;
+
+      &_header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+        margin: auto;
+
+        &_decr {
+          color: var(--Grey-Scale-Black-50, rgba(25, 24, 37, 0.5));
+          text-align: center;
+
+          /* Body */
+          font-family: Inter;
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 1.8rem */
+        }
+      }
+
+     
+    }
+    &_card{
+      margin:0 2rem;
+    }
+  }
+}
+@include mobile{
+  .travelpoint {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 0 1rem;
+
+    &_image {
+      order: -1;
+      margin: auto;     
+    }
+    &_content{
+       margin: 0 1rem;
+
+       &_header_text{
+         margin: 0 1rem;
+       }
+       &_header_decr{
+         margin: 0 3rem;
+       }
+
+
+    }
+    &_card{
+       display: flex;
+       flex-direction: column;
+
+       &_element{
+        display: flex;
+        flex-direction: column;
+
+        .travelpoint_element{
+           width: 100%;
+        }
+       }
+    }
+  }
+}
